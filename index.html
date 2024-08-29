@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        #container {
+            position: relative;
+            width: 80%;
+            height: 80vh;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #profile-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #download-button {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+
+ <div id="viewer" style="width: 100%; height: 100%;"></div>
+ <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
+ <script>
+   const config = { 
+     documentId: '117527fe-ab16-4c4d-acd4-aae801385409',
+     darkMode: true, 
+   };
+   CloudPDF(config, document.getElementById('viewer')).then((instance) => {
+     
+   });
+ </script>
+
+
+</body>
+</html>
